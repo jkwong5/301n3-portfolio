@@ -1,3 +1,47 @@
+body {
+  position:absolute;
+  background-image: url("background.jpg");
+  background-size: 200%;
+}
+
+.header{
+  margin: auto;
+  width: 60%;
+  text-align: center;
+}
+
+.profile{
+  background-image: url("https://scontent.xx.fbcdn.net/v/t1.0-9/12920331_10207857354305227_2421131021351166412_n.jpg?oh=ea35f74e6c0467569520df7102815b79&oe=57DFEAFE");
+  background-size: contain;
+  width: 150px;
+  height: 150px;
+  border-radius: 150px;
+  margin:auto;
+}
+
+.content{
+  margin: auto;
+  width: 90%;
+
+}
+
+.proj{
+  background: #F5FFFF;
+  border-radius: 25px;
+  padding: 1%;
+}
+
+.bio{
+  background: #FFFFF5;
+  border-radius: 25px;
+  padding: 1%;
+}
+
 .projects{
   display: none;
+}
+
+.projList{
+  float: right;
+  padding: 10%;
 }
