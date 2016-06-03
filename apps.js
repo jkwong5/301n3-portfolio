@@ -20,10 +20,12 @@ function Project(me){
   this.status = me.status;
   }
 
+//why are the images and urls not working?
 Project.prototype.toHtml = function(){
   var $newProj = $('article.projects').clone();
   $newProj.find('h3').text(this.name);
   $newProj.find('time').text(this.time);
+  $newProj.find('days').html('Created ' + parseInt((new Date() - new Date(this.time))/60/60/24/1000) + ' days ago');
   $newProj.find('span').text(this.status);
   $newProj.find('a').attr('href', this.url);
   $newProj.find('img').attr('src', this.img);
@@ -48,7 +50,12 @@ $(function(){
   $('span:contains("Popular")').text('&#10084;');
 });
 
+
+//Listing skillsData
+
 //copyright
 var d = new Date();
 var y = d.getFullYear();
 document.getElementById("copy").innerHTML = y;
+
+$('#sideIn').slideDown(1000, swing);

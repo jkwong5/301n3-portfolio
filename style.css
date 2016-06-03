@@ -45,3 +45,14 @@ body {
   float: right;
   padding: 10%;
 }
+
+.footer{
+  background-image: url("footer.jpg");
+  background-size: cover;
+  width: 100%;
+}
+
+.sideIn{
+  padding: .5%;
+
+}
