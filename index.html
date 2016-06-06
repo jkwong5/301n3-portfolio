@@ -7,42 +7,50 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
   </head>
   <body>
-    <div class="header" id="header">
-      <div class="profile"></div>
-      <h1>Jonathan Wong</h1>
-      <h5><em>Developer</em> at Code Fellows</h5>
-    </div>
-    <div class="content">
-      <div class="proj">
-        <p>Here are some projects I have been involved in.
-        </p>
-        <ul class="projList"><strong>Legend</strong>
-          <li id="hold">&#9995; = On Hold</li>
-          <li id="in">&#9755; = In Progress</li>
-          <li id="comp">&#9787; = Completed</li>
-          <li id="pop">&#10084; = Popular</li>
-        </ul>
-      <span id="pencil">&#9999;</span>
-        <section id="section">
-          <article class="projects" data-category="cat">
-            <h3>This will be hidden</h3>
-            <time datetime="2000-01-01"></time>
-            <days></days>
-            <span id="status"></span>
-            <br>
-            <a><img style="width:200px;hight:150px;border:1px"></a>
-            <br>
-            <section class="blurb"></section>
-          </article>
-        </section>
+    <div class="body">
+      <div class="header" id="header">
+        <div class="profile"></div>
+        <h1>Jonathan Wong</h1>
+        <h5><em>Developer</em> at Code Fellows</h5>
       </div>
-
-      <div class="bio">
-        <span id="pen">&#10002;</span>
-          <section id="sectionTwo">
+      <nav>
+        <ul>
+          <li><a href="#" data-nav="aboutMe">About Me</a></li>
+          <li><a href="#" data-nav="projects">Projects</a></li>
+          <li><a href="#" data-nav="skillSets">Skill Sets</a></li>
+          <li><a href="#" data-nav="resume">Resume</a></li>
+        </ul>
+      </nav>
+      <div class="content">
+        <div class="proj">
+          <section id="projects">
+            <p>Here are some projects I have been involved in.
+            </p>
+            <select id="catfilter">
+              <option value="">-- Category --</option>
+            </select>
+            <ul class="projList"><strong>Legend</strong>
+              <li id="hold">&#9995; = On Hold</li>
+              <li id="in">&#9755; = In Progress</li>
+              <li id="comp">&#9787; = Completed</li>
+              <li id="pop">&#10084; = Popular</li>
+            </ul>
+            <article class="projects" data-category="cat">
+              <h3><a href=""> Hidden </a></h3>
+              <time datetime="2000-01-01"></time>
+              <days></days>
+              <span id="status"></span>
+              <br>
+              <a href=""><img src="sample.jpg" style="width:200px;hight:150px;border:1px"></a>
+              <br>
+              <section class="blurb"></section>
+            </article>
+          </section>
+          <section id="aboutMe">
             <p>Currently, I am a student in the <a href="https://www.codefellows.org/courses/code-301/intPermediate-software-development">Intermediate Software Development</a> course at Code Fellows.  The course goes through a lot of concepts on front end architecture.
             </p>
-
+          </section>
+          <section id="skillSets">
             <ul><strong>Skills of a Developer</strong>
               <li id="skillone">Attention to Detail</li>
               <li id="skilltwo">Logical Thinking</li>
@@ -52,15 +60,20 @@
               <li id="skillsix">Creator</li>
             </ul>
           </section>
+          <section id="resume">
+            <p>Hello this is my resume</p>
+          </section>
+        </div>
       </div>
-    </div>
-    <div class="footer">
-      <div class="sideIn">
-        <p> Feel free to <a href="mailto:jkwong5@gmail.com?Subject=Your%20Profile">E-mail</a> me or check out my <a href="https://www.linkedin.com/in/jonkwong">LinkedIn</a>.  See my <a href="https://github.com/jkwong5">GitHub.</a></p>
-        <p>Jonathan Wong &copy; <a id="copy"></a></p>
+      <div class="footer">
+        <div class="sideIn">
+          <p> Feel free to <a href="mailto:jkwong5@gmail.com?Subject=Your%20Profile">E-mail</a> me or check out my <a href="https://www.linkedin.com/in/jonkwong">LinkedIn</a>.  See my <a href="https://github.com/jkwong5">GitHub.</a></p>
+          <p>Jonathan Wong &copy; <a id="copy"></a></p>
+        </div>
       </div>
     </div>
 
+<!-- scripts -->
     <script type="text/javascript" src="rawData.js"></script>
     <script type="text/javascript" src="apps.js"></script>
 

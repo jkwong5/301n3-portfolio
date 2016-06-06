@@ -1,38 +1,61 @@
-body {
-  position:absolute;
-  background-image: url("background.jpg");
-  background-size: 200%;
+nav ul{
+  display: flex;
+  justify-content: flex-start;
+  width: 90%;
+}
+
+nav ul li{
+  padding-left: 2em;
+  text-decoration:none;
+}
+
+ul{
+  list-style: none;
+}
+
+li a{
+  text-decoration: none;
+  color: #b8e0d3;
+}
+
+li a:hover{
+  color: grey;
+}
+
+a{
+  text-decoration: none;
+}
+
+.body {
+  background: linear-gradient(
+      rgba(0, 0, 0, 0.70),
+      rgba(0, 0, 0, 0.70)
+    ), url("background.jpg");
 }
 
 .header{
   margin: auto;
-  width: 60%;
   text-align: center;
+  color: #FFFFFF;
 }
 
 .profile{
   background-image: url("https://scontent.xx.fbcdn.net/v/t1.0-9/12920331_10207857354305227_2421131021351166412_n.jpg?oh=ea35f74e6c0467569520df7102815b79&oe=57DFEAFE");
   background-size: contain;
-  width: 150px;
-  height: 150px;
-  border-radius: 150px;
+  width: 12em;
+  height: 12em;
+  border-radius: 12em;
   margin:auto;
 }
 
 .content{
   margin: auto;
   width: 90%;
-
+  color: #FEFEFE
 }
 
 .proj{
-  background: #F5FFFF;
-  border-radius: 25px;
-  padding: 1%;
-}
 
-.bio{
-  background: #FFFFF5;
   border-radius: 25px;
   padding: 1%;
 }
