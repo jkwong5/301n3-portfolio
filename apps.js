@@ -32,29 +32,19 @@ Project.prototype.toHtml = function(){
   $newProj.attr('data-category', this.category);
   $newProj.find('days').html('Created ' + parseInt((new Date() - new Date(this.time)) / 60 / 60 / 24 / 1000) + ' days ago');
   $newProj.find('span').text(this.status);
-  $newProj.find('a').attr('href', this.url);
-  $newProj.find('img').attr('src', this.img);
+  $newProj.find('img').attr('src', this.pic);
+//  $newProj.find('a').html('<img src="' + this.pic + '">');
+  $newProj.find('a').attr('href', this.link);
   $newProj.find('section.blurb').html(this.blurb);
   $newProj.append('<br>');
   $newProj.removeClass('projects');
   return $newProj;
 };
 
-//filter for status
-var catView = {};
+//Listing skillsData
 
-catView.populateFilter = function(){
-  $('article').each(function(){
-    if(!$(this).attr('data-category')){
-      var val = $(this).attr('data-category');
-      var optionTag = '<option value="' + val + '">' + val + '</option>';
-      if($('#catfilter option[value="' + val + '"]').length === 0){
-        $('#catfilter').append(optionTag);
-      }
-    }
-  });
-};
 
+//Populating projData
 projData.forEach(function(e) {
   projects.push(new Project(e));
 });
@@ -63,6 +53,7 @@ projects.forEach(function(a){
   $('#projects').append(a.toHtml());
 });
 
+//Status icons for each project
 $(function(){
   $('span:contains("In Progress")').text('☛');
   $('span:contains("On Hold")').text('✋');
@@ -70,16 +61,42 @@ $(function(){
   $('span:contains("Popular")').text('&#10084;');
 });
 
+//Filter for category and status
+var catView = {};
 
-//Listing skillsData
+catView.populateFilter = function(){
+  $('article').each(function(){
+    if(!$(this).hasClass('projects')){
+      val = $(this).attr('data-category');
+      var optionTag = '<option value="' + val + '">' + val + '</option>';
+      if($('#catfilter option[value="' + val + '"]').length === 0){
+        $('#catfilter').append(optionTag);
+      }
+    }
+  });
+};
+//Fetch filters
+catView.handleFilter = function(){
+  $('#catfilter').on('change', function(){
+    if ($(this).val()) {
+      $('article').hide();
+      $('article[data-category="' + $(this).val() + '"]').show();
+    }
+    else {
+      $('article').fadeIn();
+      $('article.projects').hide();
+    }
+  });
+};
 
 //copyright
 var d = new Date();
 var y = d.getFullYear();
 document.getElementById('copy').innerHTML = y;
 
-$('#sideIn').slideDown(1000, swing);
 
-$(function(){
+//call functions
+$(document).ready(function() {
   catView.populateFilter();
+  catView.handleFilter();
 });
