@@ -1,7 +1,10 @@
-//scroll hide profile photo
-$( window ).scroll(function() {
-  $('.profile').hide(900);
-});
+// $('.icon-menu').hover(
+//   function() {
+//     $('nav').addClass( 'main-nav:hover' );
+//   },
+//   function() {
+//     $ ('nav').removeClass( 'main-nav:hover' );
+//   });
 
 //nav show and hide content
 $('nav').on('click', 'a', function(){
@@ -13,8 +16,11 @@ $('nav').on('click', 'a', function(){
 $('.header').on('click', 'h1', function(){
   $('section').show();
 });
+
 //constructor functions and Prototype
 var projects = [];
+var skills = [];
+var learnings = [];
 
 function Project(me){
   this.name = me.name;
@@ -22,6 +28,18 @@ function Project(me){
   this.blurb = me.blurb;
   this.category = me.category;
   this.status = me.status;
+  this.pic = me.pic;
+  this.link = me.link;
+}
+
+function Skill (opts) {
+  this.title = opts.title;
+  this.skills = opts.skills;
+}
+
+function Learning (opts) {
+  this.title = opts.title;
+  this.body = opts.body;
 }
 
 //why are the images and urls not working?
@@ -32,9 +50,8 @@ Project.prototype.toHtml = function(){
   $newProj.attr('data-category', this.category);
   $newProj.find('days').html('Created ' + parseInt((new Date() - new Date(this.time)) / 60 / 60 / 24 / 1000) + ' days ago');
   $newProj.find('span').text(this.status);
-  $newProj.find('img').attr('src', this.pic);
-//  $newProj.find('a').html('<img src="' + this.pic + '">');
-  $newProj.find('a').attr('href', this.link);
+  $newProj.find('.image-link').attr('href', this.link);
+  $newProj.find('.image-link img').attr('src', this.pic);
   $newProj.find('section.blurb').html(this.blurb);
   $newProj.append('<br>');
   $newProj.removeClass('projects');
@@ -42,7 +59,22 @@ Project.prototype.toHtml = function(){
 };
 
 //Listing skillsData
+Skill.prototype.toHtml = function(){
+  var $newSkill = $('article.skills').clone();
+  $newSkill.find('strong').html(this.title);
+  $newSkill.find('li').html(this.skills);
+  $newSkill.append('<hr>');
+  $newSkill.removeClass('skills');
+};
 
+//Listing classData
+Learning.prototype.toHtml = function(){
+  var $newClass = $('article.learning').clone();
+  $newClass.find('h2').html(this.title);
+  $newClass.find('.learning-body').html(this.body);
+  $newClass.append('<hr>');
+  $newClass.removeClass('learning');
+};
 
 //Populating projData
 projData.forEach(function(e) {
@@ -52,6 +84,35 @@ projData.forEach(function(e) {
 projects.forEach(function(a){
   $('#projects').append(a.toHtml());
 });
+
+//Populating skillsData
+skillsData.forEach(function(e) {
+  skills.push(new Skill(e));
+});
+
+skills.forEach(function(a){
+  $('#skillSets').append(a.toHtml());
+});
+//Populating classData
+classData.forEach(function(e) {
+  learnings.push(new Learning(e));
+});
+
+learnings.forEach(function(a){
+  $('#learnings').append(a.toHtml());
+});
+
+//viewMore button
+var viewMore = {};
+viewMore.teasers = function(){
+  $('.blurb *:nth-of-type(n+2)').hide();
+
+  $('#projects').on('click', 'a.more', function(e) {
+    e.preventDefault();
+    $(this).parent().find('*').fadeIn();
+    $(this).hide();
+  });
+};
 
 //Status icons for each project
 $(function(){
@@ -99,4 +160,5 @@ document.getElementById('copy').innerHTML = y;
 $(document).ready(function() {
   catView.populateFilter();
   catView.handleFilter();
+  viewMore.teasers();
 });
