@@ -1,0 +1,55 @@
+.icon-menu{
+  float: left;
+  font-size: 2em;
+  z-index: 1;
+  position: fixed;
+  left: 0;
+  top: 0;
+}
+
+.main-nav ul{
+  display: none;
+}
+
+.side-nav ul{
+  display: none;
+  font-size: 1.2em;
+}
+
+.side-nav:hover ul{
+  display: inline-block;
+  position: fixed;
+  text-align: left;
+  z-index: 2;
+  left: 0;
+  top: 0;
+  background-color: #000000;
+}
+
+.projects{
+  display: none;
+}
+
+
+@media only screen and (min-width:680px){
+.icon-menu{
+  display: none;
+}
+
+
+.main-nav ul {
+    display: flex;
+    font-size: 1.4em;
+    justify-content: center;
+}
+
+.main-nav:hover  ul{
+  display: flex;
+}
+
+.main-nav li {
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+}

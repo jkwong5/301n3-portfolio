@@ -1,0 +1,52 @@
+.header{
+  margin: auto;
+  text-align: center;
+  color: #FFFFFF;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.body {
+  background: linear-gradient(
+      rgba(0, 0, 0, 0.70),
+      rgba(0, 0, 0, 0.70)
+    ), url("../assets/background.jpg");
+  overflow: hidden;
+}
+
+.content{
+  margin: auto;
+  width: 90%;
+  color: #FEFEFE
+}
+
+/*gonna get rid of this soon*/
+.projList{
+  float: right;
+  padding: 10%;
+}
+
+.footer a{
+  font-size: 1.5em;
+  color: #FFFFFF;
+}
+
+@media only screen and (min-width:680px){
+  .profile{
+    background-image: url("https://scontent.xx.fbcdn.net/v/t1.0-9/12920331_10207857354305227_2421131021351166412_n.jpg?oh=ea35f74e6c0467569520df7102815b79&oe=57DFEAFE");
+    background-size: contain;
+    width: 8em;
+    height: 8em;
+    border-radius: 10em;
+    margin:auto;
+  }
+
+.footer{
+  background-image: url("../assets/footer.jpg");
+  background-size: cover;
+  width: 100%;
+}
+
+.footer a{
+  color: #000000;
+}
+}

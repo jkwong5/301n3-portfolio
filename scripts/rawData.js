@@ -28,8 +28,7 @@ var projData = [
   },
 ];
 
-
-var skillsData = [
+var skillData = [
   {
     title: 'Developer',
     skills: ['Attention to Detail','Logical Thinking','Eye for Design','Ideation','Problem Solver','Creator']
@@ -42,35 +41,15 @@ var skillsData = [
 
 var classData = [
   {
-    title: 'Class 1',
-    body: '<p> We did this today </p>',
-  },
-  {
-    title: 'Class 2',
-    body: '<p> We did that today </p>',
-  },
-  {
-    title: 'Class 3',
-    body: '<p> We did this today </p>',
-  },
-  {
-    title: 'Class 4',
-    body: '<p> We did that today </p>',
-  },
-  {
     title: 'Class 5',
-    body: '<p> We did this today </p>',
+    body: '<p> We did this today </p>'
   },
   {
     title: 'Class 6',
-    body: '<p> We did that today </p>',
+    body: '<p> We did that today </p>'
   },
   {
     title: 'Class 7',
-    body: '<p> We did this today </p>',
+    body: '<p> We did this today </p>'
   },
-  {
-    title: 'Class 8',
-    body: '<p> We did that today </p>',
-  }
 ];
