@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+  <meta charset="utf-8">
+  <head>
+    <title>Jonathan's Portfolio</title>
+    <meta name="viewport" content="initial-scale=1 , width=device-width">
+    <link rel="stylesheet" type="text/css" href="styles/style.css">
+    <link rel="stylesheet" href="vendor/icons.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  </head>
+  <body>
+    <div class="body">
+      <div class="header" id="header">
+        <div class="profile"></div>
+        <h1>Jonathan Wong</h1>
+        <h5><em>Developer</em> at Code Fellows</h5>
+        <nav class="main-nav">
+        <div class="icon-menu"></div>
+          <ul>
+            <li><a href="#" class="icon-user-tie" data-nav="aboutMe"> About Me</a></li>
+            <li><a href="#" class="icon-folder-open" data-nav="projects"> Projects</a></li>
+            <li><a href="#" class="icon-list-numbered" data-nav="skillSets"> Skill Sets</a></li>
+            <li><a href="#" class="icon-book" data-nav="learnings"> Learnings</a></li>
+            <li><a href="#" class="icon-profile" data-nav="resume"> Resume</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="content">
+        <div class="proj">
+          <section id="projects">
+            <p>Here are some projects I have been involved in.
+            </p>
+            <select id="catfilter">
+              <option value="">-- Category --</option>
+            </select>
+            <ul class="projList"><strong>Legend</strong>
+              <li id="hold">&#9995; = On Hold</li>
+              <li id="in">&#9755; = In Progress</li>
+              <li id="comp">&#9787; = Completed</li>
+              <li id="pop">&#10084; = Popular</li>
+            </ul>
+            <article class="projects" data-category="cat">
+              <h3>Hidden</h3>
+              <time datetime="2000-01-01"></time>
+              <days></days>
+              <span id="status"></span>
+              <br>
+              <a class="image-link" href="#">
+              <img src="#" style="width:50%;hight:45%;border:1px">
+              </a>
+              <br>
+              <section class="blurb"></section>
+              <a href="#" class="more">-more-</a>
+            </article>
+          </section>
+          <section id="aboutMe">
+            <p>Currently, I am a student in the <a href="https://www.codefellows.org/courses/code-301/intPermediate-software-development">Intermediate Software Development</a> course at Code Fellows.  The course goes through a lot of concepts on front end architecture.
+            </p>
+          </section>
+          <section id="learnings">
+            <article class="learning">
+                <h2>Class 0 Notes</h2>
+                <section class="learning-body"></section>
+                <a href="#" class="more">-more-</a>
+            </article>
+          </section>
+          <section id="skillSets">
+            <article class="skills">
+              <ul>Skills of a <strong>Developer</strong>
+                <li id="skillOne">Attention to Detail</li>
+                <li id="skillTwo">Logical Thinking</li>
+                <li id="skillThree">Eye for Design</li>
+                <li id="skillFour">Ideation</li>
+                <li id="skillFive">Problem Solver</li>
+                <li id="skillSix">Creator</li>
+              </ul>
+            </article>
+          </section>
+          <section id="resume">
+            <p>Hello this is my resume</p>
+          </section>
+        </div>
+      </div>
+      <div class="footer">
+          <p> Feel free to contact me: <br>
+            <a class="icon-mail4" href="mailto:jkwong5@gmail.com?Subject=Your%20Profile"></a>
+            <a class="icon-linkedin" href="https://www.linkedin.com/in/jonkwong"></a>
+            <a class="icon-github" href="https://github.com/jkwong5"></a>
+          </p>
+          <p>Jonathan Wong &copy; <span id="copy"></span></p>
+      </div>
+    </div>
+
+<!-- scripts -->
+    <script type="text/javascript" src="rawData.js"></script>
+    <script type="text/javascript" src="apps.js"></script>
+
+  </body>
+</html>
