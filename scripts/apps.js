@@ -5,7 +5,7 @@ $('nav').on('click', 'a', function(){
   $('#' + $nav).show();
 });
 
-$('.header').on('click', 'h1', function(){
+$('.header').on('click', 'h2', function(){
   $('section').show();
 });
 
@@ -111,13 +111,13 @@ $(function(){
 
 
 //Populating projData
-projData.forEach(function(e) {
-  projects.push(new Project(e));
-});
-
-projects.forEach(function(a){
-  $('#projects').append(a.toHtml());
-});
+// projData.forEach(function(e) {
+//   projects.push(new Project(e));
+// });
+//
+// projects.forEach(function(a){
+//   $('#projects').append(a.toHtml());
+// });
 
 //Populating skillsData
 // skillsData.forEach(function(e) {
