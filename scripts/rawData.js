@@ -24,12 +24,11 @@ var projData = [
     status: 'On Hold',
     category: 'Personal',
     time: '2016-04-01',
-    blurb: '<p>This is a simple javascript project to create a basic cover letter with inputs.</p><p>This is the 2nd line I am working on.</p><p>Third Element.</p>'
+    blurb: '<p>This is a simple pure javascript project to create a basic cover letter with inputs.</p><p>This is the 2nd line I am working on.</p><p>Here are some languages used: HTML, CSS, Javascript.</p>'
   },
 ];
 
-
-var skillsData = [
+var skillData = [
   {
     title: 'Developer',
     skills: ['Attention to Detail','Logical Thinking','Eye for Design','Ideation','Problem Solver','Creator']
@@ -42,35 +41,15 @@ var skillsData = [
 
 var classData = [
   {
-    title: 'Class 1',
-    body: '<p> We did this today </p>',
-  },
-  {
-    title: 'Class 2',
-    body: '<p> We did that today </p>',
-  },
-  {
-    title: 'Class 3',
-    body: '<p> We did this today </p>',
-  },
-  {
-    title: 'Class 4',
-    body: '<p> We did that today </p>',
-  },
-  {
     title: 'Class 5',
-    body: '<p> We did this today </p>',
+    body: '<p> We did this today </p>'
   },
   {
     title: 'Class 6',
-    body: '<p> We did that today </p>',
+    body: '<p> We did that today </p>'
   },
   {
     title: 'Class 7',
-    body: '<p> We did this today </p>',
+    body: '<p> We did this today </p>'
   },
-  {
-    title: 'Class 8',
-    body: '<p> We did that today </p>',
-  }
 ];

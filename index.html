@@ -4,18 +4,59 @@
   <head>
     <title>Jonathan's Portfolio</title>
     <meta name="viewport" content="initial-scale=1 , width=device-width">
-    <link rel="stylesheet" type="text/css" href="styles/style.css">
+    <link rel="stylesheet" type="text/css" href="vendor/styles/normalize.css">
+    <link rel="stylesheet" type="text/css" href="styles/base.css">
+    <link rel="stylesheet" type="text/css" href="styles/layout.css">
+    <link rel="stylesheet" type="text/css" href="styles/module.css">
     <link rel="stylesheet" href="vendor/icons.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.min.js" charset="utf-8"></script>
+
+    <script id="template" type="text/x-handlebars-template">
+      {{#each proj}}
+        <article data-category='{{category}}'>
+          <h3>{{name}}</h3>
+          <time datetime="2000-01-01">{{daysAgo}}</time>
+          <days></days>
+          <span id="status">{{showStatus}}</span>
+          <br>
+          <a class="image-link" href='{{link}}'>
+          <img src='{{pic}}' style="width:50%;hight:45%;border:1px">
+          </a>
+          <br>
+          <section class="blurb">{{{blurb}}}</section>
+          <a href="#" class="more">-more-</a>
+        </article>
+      {{/each}}
+      {{#each class}}
+        <h4>{{title}}</h4>
+        {{{body}}}
+      {{/each}}
+      {{#each skill}}
+        <ul>Skills of a <strong>{{title}}</strong>
+          <li>{{skills}}</li>
+        </ul>
+      {{/each}}
+    </script>
+
   </head>
   <body>
     <div class="body">
       <div class="header" id="header">
         <div class="profile"></div>
-        <h1>Jonathan Wong</h1>
-        <h5><em>Developer</em> at Code Fellows</h5>
+        <h2>Jonathan Wong</h2>
+        <h6><em>Developer</em> at Code Fellows</h6>
         <nav class="main-nav">
-        <div class="icon-menu"></div>
+            <ul>
+              <li><a href="#" class="icon-user-tie" data-nav="aboutMe"> About Me</a></li>
+              <li><a href="#" class="icon-folder-open" data-nav="projects"> Projects</a></li>
+              <li><a href="#" class="icon-list-numbered" data-nav="skillSets"> Skill Sets</a></li>
+              <li><a href="#" class="icon-book" data-nav="learnings"> Learnings</a></li>
+              <li><a href="#" class="icon-profile" data-nav="resume"> Resume</a></li>
+            </ul>
+        </nav>
+        <nav class="side-nav">
+          <div class="icon-menu"></div>
           <ul>
             <li><a href="#" class="icon-user-tie" data-nav="aboutMe"> About Me</a></li>
             <li><a href="#" class="icon-folder-open" data-nav="projects"> Projects</a></li>
@@ -33,13 +74,14 @@
             <select id="catfilter">
               <option value="">-- Category --</option>
             </select>
-            <ul class="projList"><strong>Legend</strong>
-              <li id="hold">&#9995; = On Hold</li>
-              <li id="in">&#9755; = In Progress</li>
-              <li id="comp">&#9787; = Completed</li>
-              <li id="pop">&#10084; = Popular</li>
+            <ul class="projList"><strong>Project Legend</strong>
+              <li id="hold" class="icon-pause"> = On Hold</li>
+              <li id="in" class="icon-play2"> = In Progress</li>
+              <li id="comp" class="icon-notification"> = Completed</li>
+              <li id="cancelled" class="icon-cancel-circle"> = Cancelled</li>
             </ul>
-            <article class="projects" data-category="cat">
+            <div id="projList"></div>
+            <!-- <article class="projects" data-category="cat">
               <h3>Hidden</h3>
               <time datetime="2000-01-01"></time>
               <days></days>
@@ -51,49 +93,38 @@
               <br>
               <section class="blurb"></section>
               <a href="#" class="more">-more-</a>
-            </article>
+            </article> -->
           </section>
           <section id="aboutMe">
-            <p>Currently, I am a student in the <a href="https://www.codefellows.org/courses/code-301/intPermediate-software-development">Intermediate Software Development</a> course at Code Fellows.  The course goes through a lot of concepts on front end architecture.
+            <p>Currently, I am a student in the <a href="http://www.codefellows.org/courses/code-301/intermediate-software-development">Intermediate Software Development</a> course at Code Fellows.  The course goes through a lot of concepts on front end architecture. I find this class to be invaluable to solidifying web development concepts.  Check out my <span>learnings</span> page to see what we have done in class!
             </p>
           </section>
           <section id="learnings">
-            <article class="learning">
-                <h2>Class 0 Notes</h2>
-                <section class="learning-body"></section>
-                <a href="#" class="more">-more-</a>
-            </article>
+            <div id="classData">Concepts from Code Fellows</div>
           </section>
           <section id="skillSets">
-            <article class="skills">
-              <ul>Skills of a <strong>Developer</strong>
-                <li id="skillOne">Attention to Detail</li>
-                <li id="skillTwo">Logical Thinking</li>
-                <li id="skillThree">Eye for Design</li>
-                <li id="skillFour">Ideation</li>
-                <li id="skillFive">Problem Solver</li>
-                <li id="skillSix">Creator</li>
-              </ul>
-            </article>
+            <div id="skillList"></div>
           </section>
           <section id="resume">
-            <p>Hello this is my resume</p>
+            <p>Hello this is my resume!</p>
+            <p>Check out and connect with me on <a href="https://www.linkedin.com/in/jonkwong">LinkedIn</a></p>
           </section>
         </div>
       </div>
       <div class="footer">
-          <p> Feel free to contact me: <br>
-            <a class="icon-mail4" href="mailto:jkwong5@gmail.com?Subject=Your%20Profile"></a>
-            <a class="icon-linkedin" href="https://www.linkedin.com/in/jonkwong"></a>
-            <a class="icon-github" href="https://github.com/jkwong5"></a>
-          </p>
-          <p>Jonathan Wong &copy; <span id="copy"></span></p>
+        <hr>
+        <p> Feel free to contact me: <br>
+          <a class="icon-mail4" href="mailto:jkwong5@gmail.com?Subject=Your%20Profile"></a>
+          <a class="icon-linkedin" href="https://www.linkedin.com/in/jonkwong"></a>
+          <a class="icon-github" href="https://github.com/jkwong5"></a>
+        </p>
+        <p>Jonathan Wong &copy; <span id="copy"></span></p>
       </div>
     </div>
 
 <!-- scripts -->
-    <script type="text/javascript" src="rawData.js"></script>
-    <script type="text/javascript" src="apps.js"></script>
+    <script type="text/javascript" src="scripts/rawData.js"></script>
+    <script type="text/javascript" src="scripts/apps.js"></script>
 
   </body>
 </html>

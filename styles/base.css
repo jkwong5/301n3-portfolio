@@ -1,0 +1,27 @@
+body{
+  font-size: 100%;
+}
+
+img{
+  max-width: 100%
+}
+
+ul{
+  list-style: none;
+}
+
+li a{
+  color: #b8e0d3;
+}
+
+a, a:link, a:active{
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5{
+  font-family: Georgia, serif;
+}
+
+p{
+  font-family: Tahoma, Arial, sans-serif;
+}
