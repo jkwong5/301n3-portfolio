@@ -24,7 +24,7 @@ var projData = [
     status: 'On Hold',
     category: 'Personal',
     time: '2016-04-01',
-    blurb: '<p>This is a simple javascript project to create a basic cover letter with inputs.</p><p>This is the 2nd line I am working on.</p><p>Third Element.</p>'
+    blurb: '<p>This is a simple pure javascript project to create a basic cover letter with inputs.</p><p>This is the 2nd line I am working on.</p><p>Here are some languages used: HTML, CSS, Javascript.</p>'
   },
 ];
 

@@ -9,30 +9,30 @@ $('.header').on('click', 'h2', function(){
   $('section').show();
 });
 
-//constructor functions and Prototype
-// var projects = [];
-// var skills = [];
-// var learnings = [];
+// constructor functions and Prototype
+var projects = [];
+var skills = [];
+var learnings = [];
 
-// function Project(me){
-//   this.name = me.name;
-//   this.time = me.time;
-//   this.blurb = me.blurb;
-//   this.category = me.category;
-//   this.status = me.status;
-//   this.pic = me.pic;
-//   this.link = me.link;
-// }
+function Project(me){
+  this.name = me.name;
+  this.time = me.time;
+  this.blurb = me.blurb;
+  this.category = me.category;
+  this.status = me.status;
+  this.pic = me.pic;
+  this.link = me.link;
+}
 
-// function Skill (opts) {
-//   this.title = opts.title;
-//   this.skills = opts.skills;
-// }
+function Skill (opts) {
+  this.title = opts.title;
+  this.skills = opts.skills;
+}
 
-// function Learning (opts) {
-//   this.title = opts.title;
-//   this.body = opts.body;
-// }
+function Learning (opts) {
+  this.title = opts.title;
+  this.body = opts.body;
+}
 
 //why are the images and urls not working?
 // Project.prototype.toHtml = function(){

@@ -14,17 +14,19 @@
 
     <script id="template" type="text/x-handlebars-template">
       {{#each proj}}
-        <h3>{{name}}</h3>
-        <time datetime="2000-01-01">{{daysAgo}}</time>
-        <days></days>
-        <span id="status">{{showStatus}}</span>
-        <br>
-        <a class="image-link" href='{{link}}'>
-        <img src='{{pic}}' style="width:50%;hight:45%;border:1px">
-        </a>
-        <br>
-        <section class="blurb">{{{blurb}}}</section>
-        <a href="#" class="more">-more-</a>
+        <article data-category='{{category}}'>
+          <h3>{{name}}</h3>
+          <time datetime="2000-01-01">{{daysAgo}}</time>
+          <days></days>
+          <span id="status">{{showStatus}}</span>
+          <br>
+          <a class="image-link" href='{{link}}'>
+          <img src='{{pic}}' style="width:50%;hight:45%;border:1px">
+          </a>
+          <br>
+          <section class="blurb">{{{blurb}}}</section>
+          <a href="#" class="more">-more-</a>
+        </article>
       {{/each}}
       {{#each class}}
         <h4>{{title}}</h4>
@@ -72,7 +74,7 @@
             <select id="catfilter">
               <option value="">-- Category --</option>
             </select>
-            <ul class="projList"><strong>Legend</strong>
+            <ul class="projList"><strong>Project Legend</strong>
               <li id="hold" class="icon-pause"> = On Hold</li>
               <li id="in" class="icon-play2"> = In Progress</li>
               <li id="comp" class="icon-notification"> = Completed</li>
@@ -94,7 +96,7 @@
             </article> -->
           </section>
           <section id="aboutMe">
-            <p>Currently, I am a student in the <a href="https://www.codefellows.org/courses/code-301/intPermediate-software-development">Intermediate Software Development</a> course at Code Fellows.  The course goes through a lot of concepts on front end architecture.
+            <p>Currently, I am a student in the <a href="http://www.codefellows.org/courses/code-301/intermediate-software-development">Intermediate Software Development</a> course at Code Fellows.  The course goes through a lot of concepts on front end architecture. I find this class to be invaluable to solidifying web development concepts.  Check out my <span>learnings</span> page to see what we have done in class!
             </p>
           </section>
           <section id="learnings">

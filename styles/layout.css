@@ -32,7 +32,7 @@
 
 @media only screen and (min-width:680px){
   .profile{
-    background-image: url("https://scontent.xx.fbcdn.net/v/t1.0-9/12920331_10207857354305227_2421131021351166412_n.jpg?oh=ea35f74e6c0467569520df7102815b79&oe=57DFEAFE");
+    background-image: url("../assets/profile.jpg");
     background-size: contain;
     width: 8em;
     height: 8em;
