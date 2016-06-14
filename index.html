@@ -18,7 +18,7 @@
           <h3>{{name}}</h3>
           <time datetime="2000-01-01">{{daysAgo}}</time>
           <days></days>
-          <span id="status">{{showStatus}}</span>
+          <span id="status" class='{{status}}'>{{status}}</span>
           <br>
           <a class="image-link" href='{{link}}'>
           <img src='{{pic}}' style="width:50%;hight:45%;border:1px">
@@ -81,19 +81,6 @@
               <li id="cancelled" class="icon-cancel-circle"> = Cancelled</li>
             </ul>
             <div id="projList"></div>
-            <!-- <article class="projects" data-category="cat">
-              <h3>Hidden</h3>
-              <time datetime="2000-01-01"></time>
-              <days></days>
-              <span id="status"></span>
-              <br>
-              <a class="image-link" href="#">
-              <img src="#" style="width:50%;hight:45%;border:1px">
-              </a>
-              <br>
-              <section class="blurb"></section>
-              <a href="#" class="more">-more-</a>
-            </article> -->
           </section>
           <section id="aboutMe">
             <p>Currently, I am a student in the <a href="http://www.codefellows.org/courses/code-301/intermediate-software-development">Intermediate Software Development</a> course at Code Fellows.  The course goes through a lot of concepts on front end architecture. I find this class to be invaluable to solidifying web development concepts.  Check out my <span>learnings</span> page to see what we have done in class!
@@ -125,6 +112,5 @@
 <!-- scripts -->
     <script type="text/javascript" src="scripts/rawData.js"></script>
     <script type="text/javascript" src="scripts/apps.js"></script>
-
   </body>
 </html>
