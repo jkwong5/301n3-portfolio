@@ -9,64 +9,46 @@ $('.header').on('click', 'h2', function(){
   $('section').show();
 });
 
-// constructor functions and Prototype
-var projects = [];
-var skills = [];
-var learnings = [];
+// // constructor functions and Prototype
+// var projects = [];
+// var skills = [];
+// var learnings = [];
+//
+// function Project(me){
+//   this.name = me.name;
+//   this.time = me.time;
+//   this.blurb = me.blurb;
+//   this.category = me.category;
+//   this.status = me.status;
+//   this.pic = me.pic;
+//   this.link = me.link;
+// }
+//
+// function Skill (opts) {
+//   this.title = opts.title;
+//   this.skills = opts.skills;
+// }
+//
+// function Learning (opts) {
+//   this.title = opts.title;
+//   this.body = opts.body;
+// }
 
-function Project(me){
-  this.name = me.name;
-  this.time = me.time;
-  this.blurb = me.blurb;
-  this.category = me.category;
-  this.status = me.status;
-  this.pic = me.pic;
-  this.link = me.link;
-}
+//create template
+var templateView = {};
 
-function Skill (opts) {
-  this.title = opts.title;
-  this.skills = opts.skills;
-}
-
-function Learning (opts) {
-  this.title = opts.title;
-  this.body = opts.body;
-}
-
-//general handlebar
-$(function(){
-
-  Handlebars.registerHelper('daysAgo', function(){
-    this.daysAgo = parseInt((new Date() - new Date(this.time)) / 60 / 60 / 24 / 1000);
-    this.pubTime = this.time ? 'Created ' + this.daysAgo + ' days ago' : '(What?)';
-    return this.pubTime;
-  });
-
-  var templates = $('#template').html();
-  var thisTemplate = Handlebars.compile(templates);
-// pass data
-  var projTemplate = {
-    proj : projData
-  };
-
-  var compiledProj = thisTemplate(projTemplate);
-  $('#projList').append(compiledProj);
-
-  var learningTemplate = {
-    class : classData
-  };
-
-  var compiledHTML = thisTemplate(learningTemplate);
-  $('#learnings').append(compiledHTML);
-
-  var skillTemplate = {
-    skill : skillData
-  };
-  var compiledSkill = thisTemplate(skillTemplate);
-  $('#skillList').append(compiledSkill);
-
-});
+// templateView.create = function(){
+//   var learning;
+//   $('#learnings').empty();
+//
+//   // learning = new Learning({
+//   //   title: $('#learning-title').val(),
+//   //   body: $('#learning-body').val()
+//   // });
+//
+//   $('#learnings').append(learning.toHtml());
+//
+// };
 
 //viewMore button
 var viewMore = {};
@@ -121,10 +103,16 @@ var d = new Date();
 var y = d.getFullYear();
 document.getElementById('copy').innerHTML = y;
 
+templateView.initIndexPage = function(){
+  Learning.all.forEach(function(a){
+    $('#classData').append(a.toHtml());
+  });
+};
 
 //call functions
 $(document).ready(function() {
   catView.populateFilter();
   catView.handleFilter();
   viewMore.teasers();
+  // templateView.create();
 });

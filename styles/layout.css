@@ -10,7 +10,10 @@
       rgba(0, 0, 0, 0.70),
       rgba(0, 0, 0, 0.70)
     ), url("../assets/background.jpg");
-  overflow: hidden;
+    position: relative;
+    min-width: 100%;
+    min-height: 100%;
+    background-size: cover;
 }
 
 .content{
@@ -25,9 +28,15 @@
   padding: 10%;
 }
 
+.footer {
+  position: inherit;
+  width: 100%;
+  bottom: 0;
+}
+
 .footer a{
   font-size: 1.5em;
-  color: #FFFFFF;
+  color: #000000;
 }
 
 @media only screen and (min-width:680px){
@@ -46,7 +55,4 @@
   width: 100%;
 }
 
-.footer a{
-  color: #000000;
-}
 }
