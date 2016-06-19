@@ -9,6 +9,12 @@ $('.header').on('click', 'h2', function(){
   $('section').show();
 });
 
+$(window).on('load', function(){
+  $('section').hide();
+  $('#projects').show();
+  $('#aboutMe').show();
+});
+
 // // constructor functions and Prototype
 // var projects = [];
 // var skills = [];
@@ -35,7 +41,6 @@ $('.header').on('click', 'h2', function(){
 // }
 
 //create template
-var templateView = {};
 
 // templateView.create = function(){
 //   var learning;
@@ -53,9 +58,8 @@ var templateView = {};
 //viewMore button
 var viewMore = {};
 viewMore.teasers = function(){
-  $('.blurb *:nth-of-type(n+2)').hide();
-
-  $('#projects').on('click', 'a.more', function(e) {
+  $('.blurb *:nth-of-type(n+1)').hide();
+  $('#project-template').on('click', 'a.more', function(e) {
     e.preventDefault();
     $(this).parent().find('*').fadeIn();
     $(this).hide();
@@ -103,9 +107,26 @@ var d = new Date();
 var y = d.getFullYear();
 document.getElementById('copy').innerHTML = y;
 
+
+var templateView = {};
+var projectView = {};
+var skillView = {};
+
 templateView.initIndexPage = function(){
   Learning.all.forEach(function(a){
     $('#classData').append(a.toHtml());
+  });
+};
+
+projectView.initIndexPage = function(){
+  Project.all.forEach(function(a){
+    $('#projectData').append(a.toHtml());
+  });
+};
+
+skillView.initIndexPage = function(){
+  Skill.all.forEach(function(b){
+    $('#skillData').append(b.toHtml());
   });
 };
 

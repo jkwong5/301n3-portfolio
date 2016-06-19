@@ -10,7 +10,7 @@ var projData = [
   },
   {
     name: 'EightyEight',
-    pic: 'https://images.unsplash.com/photo-1464013778555-8e723c2f01f8?format=auto&amp;auto=compress&amp;dpr=1&amp;crop=entropy&amp;fit=crop&amp;w=1080&amp;h=720&amp;q=80&quot',
+    pic: '',
     link: 'https://www.google.com',
     status: 'In Progress',
     category: 'Personal',
