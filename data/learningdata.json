@@ -1,0 +1,67 @@
+[
+  {
+    "title" : "jQuery and the Dom",
+    "date"  : "2016-06-01",
+    "body" : "Testing"
+  },
+  {
+    "title" : "jQuery and Events",
+    "date"  : "2016-06-03",
+    "body" : "Testing"
+  },
+  {
+    "title" : "Responsive Mobile First",
+    "date"  : "2016-06-05",
+    "body" : "Testing"
+  },
+  {
+    "title" : "Templates",
+    "date"  : "2016-06-09",
+    "body" : "Testing"
+  },
+ {
+    "title" : "New Article Creation",
+    "date"  : "2016-06-11",
+    "body" : "Testing"
+  },
+  {
+    "title" : "Ajax and JSON",
+    "date"  : "2016-06-11",
+    "body" : "Testing"
+  },
+  {
+    "title" : "Functional Programing",
+    "date"  : "2016-06-11",
+    "body" : "Testing"
+   },
+   {
+    "title" : "Crud a Resource",
+    "date"  : "2016-06-11",
+    "body" : "Testing"
+  },
+  {
+    "title" : "Joins and Relations",
+    "date"  : "2016-06-11",
+    "body" : "Testing"
+  },
+  {
+    "title" : "Spa Routing",
+    "date"  : "2016-06-11",
+    "body" : "Testing"
+  },
+  {
+    "title" : "REST and APIs",
+    "date"  : "2016-06-11",
+    "body" : "Testing"
+  },
+  {
+    "title" : "Production Deployment",
+    "date"  : "2016-06-11",
+    "body" : "Testing"
+  },
+  {
+  "title" : "Managing Style",
+  "date"  : "2016-06-11",
+  "body" : "Testing"
+  }
+]

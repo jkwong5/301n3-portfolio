@@ -6,11 +6,11 @@ var projData = [
     status: 'In Progress',
     category: 'Homework',
     time: '2016-06-01',
-    blurb: '<p>This is the portfolio I am working on.</p><p>This is the 2nd line I am working on.</p><p>Third Element.</p>'
+    blurb: '<p>This is the portfolio I am working on for class.</p><p>This is the 2nd line I am working on.</p><p>Looks like I am using everything I learned for this project.</p>'
   },
   {
     name: 'EightyEight',
-    pic: 'https://images.unsplash.com/photo-1464013778555-8e723c2f01f8?format=auto&amp;auto=compress&amp;dpr=1&amp;crop=entropy&amp;fit=crop&amp;w=1080&amp;h=720&amp;q=80&quot',
+    pic: '',
     link: 'https://www.google.com',
     status: 'In Progress',
     category: 'Personal',
@@ -41,15 +41,23 @@ var skillData = [
 
 var classData = [
   {
+    title: 'Class 1',
+    body: '<p> jQuery and the DOM </p>'
+  },
+  {
+    title: 'Class 2',
+    body: '<p> jQuery and Events </p>'
+  },
+  {
+    title: 'Class 3',
+    body: '<p> Responsive Mobile First </p>'
+  },
+  {
+    title: 'Class 4',
+    body: '<p> Templates </p>'
+  },
+  {
     title: 'Class 5',
-    body: '<p> We did this today </p>'
-  },
-  {
-    title: 'Class 6',
-    body: '<p> We did that today </p>'
-  },
-  {
-    title: 'Class 7',
-    body: '<p> We did this today </p>'
+    body: '<p> New Article Creation </p>'
   },
 ];

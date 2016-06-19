@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Input Project</title>
+    <link rel="stylesheet" href="vendor/styles/normalize.css">
+    <link rel="stylesheet" href="vendor/icons.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/layout.css">
+    <link rel="stylesheet" href="styles/module.css">
+    <script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
+
+    <script id="article-template" type="text/x-handlebars-template">
+      <article data-category='{{categorySlug}}'>
+        <h3>{{name}}</h3>
+        <time datetime="2000-01-01">{{daysAgo}}</time>
+        <days></days>
+        <span id="status" class='{{status}}'>{{status}}</span>
+        <br>
+        <a class="image-link" href='{{link}}'>
+        <img src='{{pic}}' style="width:50%;hight:45%;border:1px">
+        </a>
+        <br>
+        <section class="blurb">{{{blurb}}}</section>
+        <a href="#" class="more">-more-</a>
+      </article>
+    </script>
+  </head>
+  <body>
+    <section id="write" class="projectContent">
+      <h1>Add New Project</h1>
+      <form action="#" id="newProject">
+        <label>Title:</label><input type="text" id="projectTitle" required><br>
+        <label>Category:</label><input type="text" id="projectCategory" placeholder="Category" required><br>
+        <label>URL:</label><input type="text" id="projectUrl" required><br>
+        <textarea id="projectBody" rows="8" cols="40" required></textarea>
+        <input id="addBtn" type="submit" value="Add" />
+      </form>
+    </section>
+    <section id="projectExport">
+      <label id="exportField" for="projectJson">
+        <input type="text" rows="18" cols="40" readonly id="projectJson">
+      </label>
+    </section>
+  </body>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
+  <script src="scripts/new.js"></script>
+
+</html>

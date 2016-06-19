@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
-  <meta charset="utf-8">
   <head>
+    <meta charset="utf-8">
     <title>Jonathan's Portfolio</title>
     <meta name="viewport" content="initial-scale=1 , width=device-width">
     <link rel="stylesheet" type="text/css" href="vendor/styles/normalize.css">
@@ -12,33 +12,39 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.min.js" charset="utf-8"></script>
 
-    <script id="template" type="text/x-handlebars-template">
-      {{#each proj}}
-        <article data-category='{{category}}'>
-          <h3>{{name}}</h3>
-          <time datetime="2000-01-01">{{daysAgo}}</time>
-          <days></days>
-          <span id="status">{{showStatus}}</span>
-          <br>
-          <a class="image-link" href='{{link}}'>
-          <img src='{{pic}}' style="width:50%;hight:45%;border:1px">
-          </a>
-          <br>
-          <section class="blurb">{{{blurb}}}</section>
-          <a href="#" class="more">-more-</a>
-        </article>
-      {{/each}}
-      {{#each class}}
-        <h4>{{title}}</h4>
-        {{{body}}}
-      {{/each}}
-      {{#each skill}}
-        <ul>Skills of a <strong>{{title}}</strong>
-          <li>{{skills}}</li>
-        </ul>
-      {{/each}}
+    <script id="project-template" type="text/x-handlebars-template">
+      <article data-category='{{category}}'>
+        <h3>{{name}}</h3>
+        <time datetime="2000-01-01">{{daysAgo}}</time>
+        <days></days>
+        <span id="status" class='{{status}}'>{{status}}</span>
+        <br>
+        <a class="image-link" href='{{link}}'>
+        <img src='{{pic}}' style="width:50%;hight:45%;border:1px">
+        </a>
+        <br>
+        <section class="blurb">{{{blurb}}}</section>
+        <a href="#" class="more">-more-</a>
+      </article>
     </script>
-
+    <script id="skill-template" type="text/x-handlebars-template">
+      <ul>Skills of a <strong>{{title}}</strong>
+        <li>{{skills.[1]}}</li>
+        <li>{{skills.[2]}}</li>
+        <li>{{skills.[3]}}</li>
+        <li>{{skills.[4]}}</li>
+        <li>{{skills.[5]}}</li>
+        <li>{{skills.[6]}}</li>
+        <li>{{skills.[7]}}</li>
+        <li>{{skills.[8]}}</li>
+        <li>{{skills.[9]}}</li>
+        <li>{{skills.[10]}}</li>
+      </ul>
+    </script>
+    <script id="learning-template" type="text/x-handlebars-template">
+        <h4>{{title}}</h4>
+        <div class="learning-body">{{{body}}}</div>
+    </script>
   </head>
   <body>
     <div class="body">
@@ -69,7 +75,7 @@
       <div class="content">
         <div class="proj">
           <section id="projects">
-            <p>Here are some projects I have been involved in.
+            <!-- <p>Here are some projects I have been involved in.
             </p>
             <select id="catfilter">
               <option value="">-- Category --</option>
@@ -79,21 +85,8 @@
               <li id="in" class="icon-play2"> = In Progress</li>
               <li id="comp" class="icon-notification"> = Completed</li>
               <li id="cancelled" class="icon-cancel-circle"> = Cancelled</li>
-            </ul>
-            <div id="projList"></div>
-            <!-- <article class="projects" data-category="cat">
-              <h3>Hidden</h3>
-              <time datetime="2000-01-01"></time>
-              <days></days>
-              <span id="status"></span>
-              <br>
-              <a class="image-link" href="#">
-              <img src="#" style="width:50%;hight:45%;border:1px">
-              </a>
-              <br>
-              <section class="blurb"></section>
-              <a href="#" class="more">-more-</a>
-            </article> -->
+            </ul> -->
+            <div id="projectData"></div>
           </section>
           <section id="aboutMe">
             <p>Currently, I am a student in the <a href="http://www.codefellows.org/courses/code-301/intermediate-software-development">Intermediate Software Development</a> course at Code Fellows.  The course goes through a lot of concepts on front end architecture. I find this class to be invaluable to solidifying web development concepts.  Check out my <span>learnings</span> page to see what we have done in class!
@@ -103,7 +96,7 @@
             <div id="classData">Concepts from Code Fellows</div>
           </section>
           <section id="skillSets">
-            <div id="skillList"></div>
+            <div id="skillData"></div>
           </section>
           <section id="resume">
             <p>Hello this is my resume!</p>
@@ -111,20 +104,21 @@
           </section>
         </div>
       </div>
-      <div class="footer">
-        <hr>
-        <p> Feel free to contact me: <br>
-          <a class="icon-mail4" href="mailto:jkwong5@gmail.com?Subject=Your%20Profile"></a>
-          <a class="icon-linkedin" href="https://www.linkedin.com/in/jonkwong"></a>
-          <a class="icon-github" href="https://github.com/jkwong5"></a>
-        </p>
-        <p>Jonathan Wong &copy; <span id="copy"></span></p>
-      </div>
     </div>
+    <footer class="footer">
+      <hr>
+      <p> Feel free to contact me: <br>
+        <a class="icon-mail4" href="mailto:jkwong5@gmail.com?Subject=Your%20Profile"></a>
+        <a class="icon-linkedin" href="https://www.linkedin.com/in/jonkwong"></a>
+        <a class="icon-github" href="https://github.com/jkwong5"></a>
+      </p>
+      <p>Jonathan Wong &copy; <span id="copy"></span></p>
+    </footer>
 
 <!-- scripts -->
-    <script type="text/javascript" src="scripts/rawData.js"></script>
+    <!-- <script type="text/javascript" src="scripts/rawData.js"></script> -->
     <script type="text/javascript" src="scripts/apps.js"></script>
+    <script type="text/javascript" src="scripts/ajax.js"></script>
 
   </body>
 </html>
