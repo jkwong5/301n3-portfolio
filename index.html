@@ -42,8 +42,11 @@
       </ul>
     </script>
     <script id="learning-template" type="text/x-handlebars-template">
-        <h4>{{title}}</h4>
-        <div class="learning-body">{{{body}}}</div>
+      <h4>{{title}}</h4>
+      <div class="learning-body">{{{body}}}</div>
+    </script>
+    <script id="resume-template" type="text/x-handlebars-template">
+      <ul>Years of <strong>{{catName}}</strong> experience: {{catYears}}</ul>
     </script>
   </head>
   <body>
@@ -99,7 +102,19 @@
             <div id="skillData"></div>
           </section>
           <section id="resume">
-            <p>Hello this is my resume!</p>
+            <b>Summary of Professional Experience</b>
+            <div class="resume-stats">
+              <p> I hold a total of <span class="years"></span> years of professional experience.</p>
+              <p> I have held a total of <span class="cat"></span> positions in my professional experience:</p>
+            </div>
+            <form>
+              <label class="resume-container">
+                <input type="text" readonly class="resume-field" id="resume-field">
+              </label>
+                <input id="resume-copy" type="submit" value="Copy Text" />
+                <input id="resume-download" type="submit" value="Download Word" />
+                <input id="pdf-download" type="submit" value="Download PDF" />
+            </form>
             <p>Check out and connect with me on <a href="https://www.linkedin.com/in/jonkwong">LinkedIn</a></p>
           </section>
         </div>
