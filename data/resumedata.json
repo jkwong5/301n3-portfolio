@@ -1,0 +1,42 @@
+[
+  {
+    "company": "Microsoft",
+    "title": "Project Manager",
+    "start": 2014,
+    "end": 2017,
+    "category": "Manager",
+    "summary": "<p>This is the portfolio I am working on for class.<\/p><p>This is the 2nd line I am working on.<\/p><p>Looks like I am using everything I learned for this project.<\/p>"
+  },
+  {
+    "company": "Microsoft",
+    "title": "Project Manager",
+    "start": 2013,
+    "end": 2014,
+    "category": "Manager",
+    "summary": "<p>This is the portfolio I am working on for class.<\/p><p>This is the 2nd line I am working on.<\/p><p>Looks like I am using everything I learned for this project.<\/p>"
+  },
+  {
+    "company": "Microsoft",
+    "title": "E-mail Marketing Manager",
+    "start": 2012,
+    "end": 2013,
+    "category": "Marketing",
+    "summary": "<p>This is the portfolio I am working on for class.<\/p><p>This is the 2nd line I am working on.<\/p><p>Looks like I am using everything I learned for this project.<\/p>"
+  },
+  {
+    "company": "Amazon",
+    "title": "Site Merchandiser",
+    "start": 2011,
+    "end": 2012,
+    "category": "Web Design",
+    "summary": "<p>This is the portfolio I am working on for class.<\/p><p>This is the 2nd line I am working on.<\/p><p>Looks like I am using everything I learned for this project.<\/p>"
+  },
+  {
+    "company": "Frys Electronics",
+    "title": "Telecom Sales",
+    "start": 2010,
+    "end": 2011,
+    "category": "Sales",
+    "summary": "<p>This is the portfolio I am working on for class.<\/p><p>This is the 2nd line I am working on.<\/p><p>Looks like I am using everything I learned for this project.<\/p>"
+  }
+]

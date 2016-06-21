@@ -28,6 +28,16 @@
   padding: 10%;
 }
 
+.resume-container{
+  display: flex;
+  justify-content: center;
+}
+
+.resume-field{
+  width: 100%;
+  height: 40em;
+}
+
 .footer {
   position: inherit;
   width: 100%;
