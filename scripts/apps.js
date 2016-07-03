@@ -1,20 +1,20 @@
 (function(module){
 //nav show and hide content
-  $('nav').on('click', 'a', function(){
-    $('section').hide();
-    var $nav = $(this).data('nav');
-    $('#' + $nav).show();
-  });
+  // $('nav').on('click', 'a', function(){
+  //   $('section').hide();
+  //   var $nav = $(this).data('nav');
+  //   $('#' + $nav).show();
+  // });
 
   $('.header').on('click', 'h2', function(){
     $('section').show();
   });
 
-  $(window).on('load', function(){
-    $('section').hide();
-    $('#projects').show();
-    $('#aboutMe').show();
-  });
+  // $(window).on('load', function(){
+  //   $('section').hide();
+  //   $('#projects').show();
+  //   $('#aboutMe').show();
+  // });
 
   //viewMore button
   var viewMore = {};
@@ -75,6 +75,7 @@
   var resumeView = {};
 
   templateView.initIndexPage = function(){
+    $('#classData').empty();
     Learning.all.forEach(function(a){
       $('#classData').append(a.toHtml());
     });
