@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="vendor/icons.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.min.js" charset="utf-8"></script>
+    <script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
 
     <script id="project-template" type="text/x-handlebars-template">
       <article data-category='{{category}}'>
@@ -57,27 +58,27 @@
         <h6><em>Developer</em> at Code Fellows</h6>
         <nav class="main-nav">
             <ul>
-              <li><a href="#" class="icon-user-tie" data-nav="aboutMe"> About Me</a></li>
-              <li><a href="#" class="icon-folder-open" data-nav="projects"> Projects</a></li>
-              <li><a href="#" class="icon-list-numbered" data-nav="skillSets"> Skill Sets</a></li>
-              <li><a href="#" class="icon-book" data-nav="learnings"> Learnings</a></li>
-              <li><a href="#" class="icon-profile" data-nav="resume"> Resume</a></li>
+              <li><a href="about" class="icon-user-tie" data-nav="aboutMe"> About Me</a></li>
+              <li><a href="projects" class="icon-folder-open" data-nav="projects"> Projects</a></li>
+              <li><a href="skills" class="icon-list-numbered" data-nav="skillSets"> Skill Sets</a></li>
+              <li><a href="learnings" class="icon-book" data-nav="learnings"> Learnings</a></li>
+              <li><a href="resume" class="icon-profile" data-nav="resume"> Resume</a></li>
             </ul>
         </nav>
         <nav class="side-nav">
           <div class="icon-menu"></div>
           <ul>
-            <li><a href="#" class="icon-user-tie" data-nav="aboutMe"> About Me</a></li>
-            <li><a href="#" class="icon-folder-open" data-nav="projects"> Projects</a></li>
-            <li><a href="#" class="icon-list-numbered" data-nav="skillSets"> Skill Sets</a></li>
-            <li><a href="#" class="icon-book" data-nav="learnings"> Learnings</a></li>
-            <li><a href="#" class="icon-profile" data-nav="resume"> Resume</a></li>
+            <li><a href="about" class="icon-user-tie" data-nav="aboutMe"> About Me</a></li>
+            <li><a href="projects" class="icon-folder-open" data-nav="projects"> Projects</a></li>
+            <li><a href="skills" class="icon-list-numbered" data-nav="skillSets"> Skill Sets</a></li>
+            <li><a href="learnings" class="icon-book" data-nav="learnings"> Learnings</a></li>
+            <li><a href="resume" class="icon-profile" data-nav="resume"> Resume</a></li>
           </ul>
         </nav>
       </div>
       <div class="content">
         <div class="proj">
-          <section id="projects">
+          <section id="projects" class="tab-content">
             <!-- <p>Here are some projects I have been involved in.
             </p>
             <select id="catfilter">
@@ -91,17 +92,17 @@
             </ul> -->
             <div id="projectData"></div>
           </section>
-          <section id="aboutMe">
+          <section id="aboutMe" class="tab-content">
             <p>Currently, I am a student in the <a href="http://www.codefellows.org/courses/code-301/intermediate-software-development">Intermediate Software Development</a> course at Code Fellows.  The course goes through a lot of concepts on front end architecture. I find this class to be invaluable to solidifying web development concepts.  Check out my <span>learnings</span> page to see what we have done in class!
             </p>
           </section>
-          <section id="learnings">
+          <section id="learnings" class="tab-content">
             <div id="classData">Concepts from Code Fellows</div>
           </section>
-          <section id="skillSets">
+          <section id="skillSets" class="tab-content">
             <div id="skillData"></div>
           </section>
-          <section id="resume">
+          <section id="resume" class="tab-content">
             <b>Summary of Professional Experience</b>
             <div class="resume-stats">
               <p> I hold a total of <span class="years"></span> years of professional experience.</p>
@@ -134,6 +135,7 @@
     <!-- <script type="text/javascript" src="scripts/rawData.js"></script> -->
     <script type="text/javascript" src="scripts/apps.js"></script>
     <script type="text/javascript" src="scripts/ajax.js"></script>
-
+    <script type="text/javascript" src="scripts/pageController.js"></script>
+    <script type="text/javascript" src="scripts/routes.js"></script>
   </body>
 </html>

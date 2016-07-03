@@ -1,0 +1,23 @@
+{
+  "name": "301n3-portfolio",
+  "version": "1.0.0",
+  "description": "tinted background with https://css-tricks.com/tinted-images-multiple-backgrounds/\r restructured CSS\r rawData added\r removed some show hide elements",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jkwong5/301n3-portfolio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jkwong5/301n3-portfolio/issues"
+  },
+  "homepage": "https://github.com/jkwong5/301n3-portfolio#readme",
+  "dependencies": {
+    "express": "^4.14.0"
+  }
+}

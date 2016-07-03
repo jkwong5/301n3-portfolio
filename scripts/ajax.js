@@ -180,12 +180,12 @@
     }
   };
 
-  $(function(){
-    Learning.fetchAll(templateView.initIndexPage);
-    Project.fetchAll(projectView.initIndexPage);
-    Skill.fetchAll(skillView.initIndexPage);
-    Resume.fetchAll(resumeView.initIndexPage);
-  });
+  // $(function(){
+  //   Learning.fetchAll(templateView.initIndexPage);
+  //   Project.fetchAll(projectView.initIndexPage);
+  //   Skill.fetchAll(skillView.initIndexPage);
+  //   Resume.fetchAll(resumeView.initIndexPage);
+  // });
 
   module.Project = Project;
   module.Skill = Skill;
