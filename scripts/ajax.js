@@ -32,6 +32,8 @@
   Skill.all = [];
   Learning.all = [];
   Resume.all = [];
+  var repos = {};
+  repos.all = [];
 
   Resume.loadAll = function(resData){
     // resData.sort(function(a, b){
@@ -131,6 +133,23 @@
     }
   };
 
+  repos.requestRepos = function(callback) {
+    $.ajax({
+      url: 'https://api.github.com/users/jkwong5/repos?per_page=10&sorted=updated',
+      type: 'GET',
+      headers: {'authorization': 'token ' + githubtoken},
+      success: function(data){
+        repos.all = data;
+      }
+    }).done(callback);
+  };
+
+  repos.with = function(attr) {
+    return repos.all.filter(function(repo) {
+      return repo[attr];
+    });
+  };
+
   Skill.prototype.toHtml = function(){
     var template = Handlebars.compile($('#skill-template').text());
     return template(this);
@@ -191,5 +210,5 @@
   module.Skill = Skill;
   module.Learning = Learning;
   module.Resume = Resume;
-
+  module.repos = repos;
 })(window);

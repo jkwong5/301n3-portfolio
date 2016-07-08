@@ -11,6 +11,9 @@
     <link rel="stylesheet" href="vendor/icons.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.min.js" charset="utf-8"></script>
+    <script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-database.js"></script>
     <script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
 
     <script id="project-template" type="text/x-handlebars-template">
@@ -26,6 +29,14 @@
         <br>
         <section class="blurb">{{{blurb}}}</section>
         <a href="#" class="more">-more-</a>
+      </article>
+    </script>
+    <script id="repo-template" type="text/x-handlebars-template">
+      <article>
+        <a href='{{html_url}}' target="_blank">
+        <h3>{{name}}</h3>
+        </a>
+        <time datetime="2000-01-01">{{created_at}}</time>
       </article>
     </script>
     <script id="skill-template" type="text/x-handlebars-template">
@@ -60,6 +71,7 @@
             <ul>
               <li><a href="about" class="icon-user-tie" data-nav="aboutMe"> About Me</a></li>
               <li><a href="projects" class="icon-folder-open" data-nav="projects"> Projects</a></li>
+              <li><a href="repositories" class="icon-github" data-nav="repos"> Repositories</a></li>
               <li><a href="skills" class="icon-list-numbered" data-nav="skillSets"> Skill Sets</a></li>
               <li><a href="learnings" class="icon-book" data-nav="learnings"> Learnings</a></li>
               <li><a href="resume" class="icon-profile" data-nav="resume"> Resume</a></li>
@@ -70,6 +82,7 @@
           <ul>
             <li><a href="about" class="icon-user-tie" data-nav="aboutMe"> About Me</a></li>
             <li><a href="projects" class="icon-folder-open" data-nav="projects"> Projects</a></li>
+            <li><a href="repositories" class="icon-github" data-nav="repos"> Repositories</a></li>
             <li><a href="skills" class="icon-list-numbered" data-nav="skillSets"> Skill Sets</a></li>
             <li><a href="learnings" class="icon-book" data-nav="learnings"> Learnings</a></li>
             <li><a href="resume" class="icon-profile" data-nav="resume"> Resume</a></li>
@@ -97,7 +110,11 @@
             </p>
           </section>
           <section id="learnings" class="tab-content">
-            <div id="classData">Concepts from Code Fellows</div>
+            <div id="classData" class="classData">Concepts from Code Fellows</div>
+          </section>
+          <section id="repos" class="tab-content">
+            <ul>
+            </ul>
           </section>
           <section id="skillSets" class="tab-content">
             <div id="skillData"></div>
@@ -133,8 +150,10 @@
 
 <!-- scripts -->
     <!-- <script type="text/javascript" src="scripts/rawData.js"></script> -->
+    <script type="text/javascript" src="scripts/githubtoken.js"></script>
     <script type="text/javascript" src="scripts/apps.js"></script>
     <script type="text/javascript" src="scripts/ajax.js"></script>
+    <script type="text/javascript" src="scripts/firebase.js"></script>
     <script type="text/javascript" src="scripts/pageController.js"></script>
     <script type="text/javascript" src="scripts/routes.js"></script>
   </body>
