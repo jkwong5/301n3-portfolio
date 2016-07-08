@@ -1,0 +1,39 @@
+[debug] ----------------------------------------------------------------------
+[debug] Command:      C:\Program Files\nodejs\node.exe C:\Users\v-jowong\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase serve
+[debug] CLI Version:  3.0.3
+[debug] Platform:     win32
+[debug] Node Version: v4.4.4
+[debug] Time:         Sun Jul 03 2016 15:15:11 GMT-0700 (Pacific Daylight Time)
+[debug] ----------------------------------------------------------------------
+[debug] 
+[info] Starting Firebase development server...
+[info] 
+[warn] !  No Firebase project directory detected. Serving static content from C:\Users\v-jowong\Documents\Projects\301\301n3-portfolio
+[info] 
+[info] Server listening at: http://localhost:5000
+[debug] ----------------------------------------------------------------------
+[debug] Command:      C:\Program Files\nodejs\node.exe C:\Users\v-jowong\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase serve
+[debug] CLI Version:  3.0.3
+[debug] Platform:     win32
+[debug] Node Version: v4.4.4
+[debug] Time:         Tue Jul 05 2016 13:20:41 GMT-0700 (Pacific Daylight Time)
+[debug] ----------------------------------------------------------------------
+[debug] 
+[info] Starting Firebase development server...
+[info] 
+[warn] !  No Firebase project directory detected. Serving static content from C:\Users\v-jowong\Documents\Projects\301\301n3-portfolio
+[info] 
+[info] Server listening at: http://localhost:5000
+[debug] ----------------------------------------------------------------------
+[debug] Command:      C:\Program Files\nodejs\node.exe C:\Users\v-jowong\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase serve
+[debug] CLI Version:  3.0.3
+[debug] Platform:     win32
+[debug] Node Version: v4.4.4
+[debug] Time:         Tue Jul 05 2016 17:47:47 GMT-0700 (Pacific Daylight Time)
+[debug] ----------------------------------------------------------------------
+[debug] 
+[info] Starting Firebase development server...
+[info] 
+[warn] !  No Firebase project directory detected. Serving static content from C:\Users\v-jowong\Documents\Projects\301\301n3-portfolio
+[info] 
+[info] Server listening at: http://localhost:5000

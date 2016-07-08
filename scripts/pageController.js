@@ -41,6 +41,14 @@
     $('#learnings').fadeIn();
   };
 
+  var repoController = {};
+
+  repoController.index = function() {
+    $('.tab-content').hide();
+    $('#repos').fadeIn();
+    repos.requestRepos(repoView.index);
+  };
+
   var resumeController = {};
   Resume.fetchAll(resumeView.initIndexPage);
 
@@ -52,6 +60,7 @@
   module.indexController = indexController;
   module.aboutController = aboutController;
   module.projectController = projectController;
+  module.repoController = repoController;
   module.skillController = skillController;
   module.learningController = learningController;
   module.resumeController = resumeController;

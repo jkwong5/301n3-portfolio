@@ -73,6 +73,7 @@
   var projectView = {};
   var skillView = {};
   var resumeView = {};
+  var repoView = {};
 
   templateView.initIndexPage = function(){
     $('#classData').empty();
@@ -103,6 +104,20 @@
     $('#resume .cat').text(Resume.all.length);
   };
 
+  var render = Handlebars.compile($('#repo-template').html());
+  var ui = function(){
+    var $repos = $('#repos');
+    $repos.find('ul').empty();
+    $repos.show().siblings().hide();
+  };
+
+  repoView.index = function() {
+    ui();
+    $('#repos ul').append(
+      repos.with('name').map(render)
+    );
+  };
+
   //call functions
   $(document).ready(function() {
     catView.populateFilter();
@@ -116,5 +131,6 @@
   module.resumeView = resumeView;
   module.skillView = skillView;
   module.projectView = projectView;
+  module.repoView = repoView;
   module.templateView = templateView;
 })(window);
