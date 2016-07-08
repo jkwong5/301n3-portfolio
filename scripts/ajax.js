@@ -144,9 +144,9 @@
     }).done(callback);
   };
 
-  repos.with = function(attr) {
+  repos.with = function() {
     return repos.all.filter(function(repo) {
-      return repo[attr];
+      return repo.fork === false;
     });
   };
 
