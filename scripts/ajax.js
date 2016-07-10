@@ -137,7 +137,7 @@
     $.ajax({
       url: 'github/user/repos' + '?per_page=10' + '&sorted=updated',
       type: 'GET',
-      headers: {'authorization': 'token ' + GITHUB_TOKEN},
+      // headers: {'authorization': 'token ' + GITHUB_TOKEN},
       success: function(data){
         repos.all = data;
       }
