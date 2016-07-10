@@ -1,5 +1,5 @@
-// var requestProxy = require('express-request-proxy'),
-  var express = require('express'),
+var requestProxy = require('express-request-proxy'),
+  express = require('express'),
   port = process.env.PORT || 5000,
   app = express();
 

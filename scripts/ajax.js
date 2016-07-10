@@ -135,7 +135,7 @@
 
   repos.requestRepos = function(callback) {
     $.ajax({
-      url: 'github/user/repos' + '?per_page=10' + '&sorted=updated',
+      url: 'github/user/repos',
       type: 'GET',
       // headers: {'authorization': 'token ' + GITHUB_TOKEN},
       success: function(data){
