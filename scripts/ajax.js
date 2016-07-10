@@ -135,9 +135,9 @@
 
   repos.requestRepos = function(callback) {
     $.ajax({
-      url: 'https://api.github.com/users/jkwong5/repos?per_page=10&sorted=updated',
+      url: 'github/user/repos' + '?per_page=10' + '&sorted=updated',
       type: 'GET',
-      headers: {'authorization': 'token ' + githubtoken},
+      headers: {'authorization': 'token ' + GITHUB_TOKEN},
       success: function(data){
         repos.all = data;
       }
