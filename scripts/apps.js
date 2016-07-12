@@ -88,6 +88,16 @@
     });
   };
 
+  projectView.index = function(projects){
+    $('#projects').show();
+    // .siblings().hide();
+
+    // $('#projects article').remove();
+    Project.all.forEach(function(a) {
+      $('#projects').append(render(a));
+    });
+  };
+
   skillView.initIndexPage = function(){
     Skill.all.forEach(function(b){
       $('#skillData').append(b.toHtml());
