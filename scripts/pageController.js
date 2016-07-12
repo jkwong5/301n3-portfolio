@@ -1,5 +1,6 @@
 (function(module) {
   var indexController = {};
+
   indexController.index = function() {
     $('.tab-content').hide();
     $('#aboutMe').fadeIn();
@@ -7,23 +8,42 @@
   };
 
   var aboutController = {};
+
   aboutController.index = function() {
     $('.tab-content').hide();
     $('#aboutMe').fadeIn();
   };
 
   var projectController = {};
-  Project.fetchAll(projectView.initIndexPage);
+  // Project.fetchAll(projectView.initIndexPage);
 
-  projectController.index = function() {
-    // if (Project.fetchAll.length){
-    //   $('.tab-content').hide();
-    //   $('#projects').fadeIn();
-    // } else {
-    $('.tab-content').hide();
-    $('#projects').fadeIn();
-
+  projectController.index = function(ctx, next) {
+    projectView.initIndexPage(ctx.projects);
   };
+
+  projectController.loadAll = function(ctx, next) {
+    var projectData = function() {
+      ctx.projects = Project.all;
+      next();
+    };
+    if (Project.all.length) {
+      ctx.projects = Project.all;
+      next();
+    } else {
+      Project.fetchAll(projectData);
+    }
+  };
+
+
+  // projectController.index = function() {
+  //   // if (Project.fetchAll.length){
+  //   //   $('.tab-content').hide();
+  //   //   $('#projects').fadeIn();
+  //   // } else {
+  //   $('.tab-content').hide();
+  //   $('#projects').fadeIn();
+  //
+  // };
 
   var skillController = {};
   Skill.fetchAll(skillView.initIndexPage);
@@ -44,10 +64,14 @@
   var repoController = {};
 
   repoController.index = function() {
-    $('.tab-content').hide();
-    $('#repos').fadeIn();
     repos.requestRepos(repoView.index);
   };
+
+  // repoController.index = function() {
+  //   $('.tab-content').hide();
+  //   $('#repos').fadeIn();
+  //   repos.requestRepos(repoView.index);
+  // };
 
   var resumeController = {};
   Resume.fetchAll(resumeView.initIndexPage);
